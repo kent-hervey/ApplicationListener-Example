@@ -25,6 +25,11 @@ public class ApiService {
 		Long booksCount = bookRepository.count();
 		return booksCount;
 	}
+
+	public void createBook(Book book) {
+		bookRepository.save(book);
+		
+	}
 	
 	
 }
