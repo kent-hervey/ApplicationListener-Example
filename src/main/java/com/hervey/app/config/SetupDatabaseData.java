@@ -24,6 +24,7 @@ public class SetupDatabaseData implements ApplicationListener<ContextRefreshedEv
 			System.out.println("here we will add a record because books size is:  " + apiService.fetchCountBooks());
 			
 			Book book = new Book();
+			book.setId((long) 1);
 			book.setName("bookname2");
 			book.setNumberPages(34);
 			apiService.createBook(book);

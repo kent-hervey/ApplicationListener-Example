@@ -30,6 +30,15 @@ public class ApiService {
 		bookRepository.save(book);
 		
 	}
+
+	 public  Book fetchTheBook() {
+		// TODO Auto-generated method stub
+		return bookRepository.findFirstByOrderById();
+	}
+
+	public Book updateBook(Book book) {
+		return bookRepository.save(book);
+	}
 	
 	
 }
