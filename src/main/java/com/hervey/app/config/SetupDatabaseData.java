@@ -24,12 +24,10 @@ public class SetupDatabaseData implements ApplicationListener<ContextRefreshedEv
 			System.out.println("here we will add a record because books size is:  " + apiService.fetchCountBooks());
 			
 			Book book = new Book();
-			
 			book.setName("bookname2");
 			book.setNumberPages(34);
 			apiService.createBook(book);
-			
-			
+				
 		}
 		else {
 			System.out.println("we won't add becasue books size is;  " + apiService.fetchCountBooks());
