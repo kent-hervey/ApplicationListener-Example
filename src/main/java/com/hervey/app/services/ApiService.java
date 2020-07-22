@@ -21,4 +21,10 @@ public class ApiService {
 		return books;
 	}
 
+	public Long fetchCountBooks() {
+		Long booksCount = bookRepository.count();
+		return booksCount;
+	}
+	
+	
 }

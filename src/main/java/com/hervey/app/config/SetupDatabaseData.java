@@ -17,13 +17,20 @@ public class SetupDatabaseData implements ApplicationListener<ContextRefreshedEv
 	}
 
 
-	@Transactional
+
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		// TODO Auto-generated method stub
 		System.out.println("first test");
 		int bookSize = apiService.fetchAllBooks().size();
 		System.out.println("number of books is:  " + bookSize);
+		
+		if(apiService.fetchCountBooks()==0) {
+			System.out.println("here we will add a record because books size is:  " + apiService.fetchCountBooks());
+		}
+		else {
+			System.out.println("we won't add becasue books size is;  " + apiService.fetchCountBooks());
+		}
 	}
 	
 	
@@ -31,7 +38,7 @@ public class SetupDatabaseData implements ApplicationListener<ContextRefreshedEv
 	
 	
 	
-	
+	 
 	
 	
 
